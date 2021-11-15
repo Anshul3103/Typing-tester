@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Typing Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section id="timer-text">1:00</section>
+    <section id="test-box">
+      <div id="test-box-text">
+        <% wordStore.forEach(word =>{ %>
+        <span><%-word %></span>
+        <% }) %>
+      </div>
+    </section>
+    <form>
+      <input
+        onkeyup="inputType(this)"
+        onfocus="onFocus()"
+        onblur="onBlur()"
+        type="text"
+        id="write-box"
+      />
+    </form>
+
+    <section id="score">
+      <p>You Scored:</p>
+      <p id="score-wpm">60WPM</p>
+    </section>
+    <!-- Scripts Do not touch -->
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+    <script src="testBox.js"></script>
+    <script src="Dark.js"></script>
+    <script src="timer.js"></script>
+  </body>
+</html>
